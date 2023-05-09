@@ -21,14 +21,18 @@ public class Game implements Serializable {
 	private Long id;
 	private String title;
 	
-	@Column(name = "game_year") //Customizando esse nome pq no banco a palavra "year" é reservada, então pode dar erro
+	@Column(name = "game_year") //Customizando esse nome pq no banco a palavra "year" é reservada, então pode dar erro.
 	private Integer year;
 	
 	private String genre;
 	private String platforms;
 	private Double score;
 	private String imgUrl;
-	private String shortDescripton;
+	
+	@Column(columnDefinition = "TEXT") //Customizando a coluna como TEXT, pq se for padrão (varchar 255), não vai caber o texto.
+	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT") //Customizando a coluna como TEXT, pq se for padrão (varchar 255), não vai caber o texto.
 	private String longDescription;
 	
 	public Game() {}
@@ -43,7 +47,7 @@ public class Game implements Serializable {
 		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
-		this.shortDescripton = shortDescripton;
+		this.shortDescription = shortDescripton;
 		this.longDescription = longDescription;
 	}
 
@@ -104,11 +108,11 @@ public class Game implements Serializable {
 	}
 
 	public String getShortDescripton() {
-		return shortDescripton;
+		return shortDescription;
 	}
 
 	public void setShortDescripton(String shortDescripton) {
-		this.shortDescripton = shortDescripton;
+		this.shortDescription = shortDescripton;
 	}
 
 	public String getLongDescription() {
