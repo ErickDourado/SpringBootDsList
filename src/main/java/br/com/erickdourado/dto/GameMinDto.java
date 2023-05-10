@@ -1,6 +1,7 @@
 package br.com.erickdourado.dto;
 
 import br.com.erickdourado.entities.Game;
+import br.com.erickdourado.projections.GameMinProjection;
 
 public class GameMinDTO {
 	
@@ -18,6 +19,14 @@ public class GameMinDTO {
 		this.year = game.getYear();
 		this.imgUrl = game.getImgUrl();
 		this.shortDescription = game.getShortDescripton();
+	}
+	
+	public GameMinDTO(GameMinProjection gameMinProjection) {
+		this.id = gameMinProjection.getId();
+		this.title = gameMinProjection.getTitle();
+		this.year = gameMinProjection.getYear();
+		this.imgUrl = gameMinProjection.getImgUrl();
+		this.shortDescription = gameMinProjection.getShortDescription();
 	}
 
 	public Long getId() {

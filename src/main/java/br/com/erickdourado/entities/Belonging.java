@@ -1,5 +1,6 @@
 package br.com.erickdourado.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import jakarta.persistence.EmbeddedId;
@@ -8,7 +9,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_belonging")
-public class Belonging {
+public class Belonging implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
 	private BelongingPK id;
