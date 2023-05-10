@@ -2,7 +2,7 @@ package br.com.erickdourado.dto;
 
 import br.com.erickdourado.entities.Game;
 
-public class GameMinDto {
+public class GameMinDTO {
 	
 	private Long id;
 	private String title;
@@ -10,9 +10,9 @@ public class GameMinDto {
 	private String imgUrl;
 	private String shortDescription;
 
-	public GameMinDto() {}
+	public GameMinDTO() {}
 
-	public GameMinDto(Game game) {
+	public GameMinDTO(Game game) {
 		this.id = game.getId();
 		this.title = game.getTitle();
 		this.year = game.getYear();
