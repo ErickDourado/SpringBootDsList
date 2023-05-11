@@ -11,8 +11,6 @@ public class GameMinDTO {
 	private String imgUrl;
 	private String shortDescription;
 
-	public GameMinDTO() {}
-
 	public GameMinDTO(Game game) {
 		this.id = game.getId();
 		this.title = game.getTitle();
@@ -24,7 +22,7 @@ public class GameMinDTO {
 	public GameMinDTO(GameMinProjection gameMinProjection) {
 		this.id = gameMinProjection.getId();
 		this.title = gameMinProjection.getTitle();
-		this.year = gameMinProjection.getYear();
+		this.year = gameMinProjection.getGameYear();
 		this.imgUrl = gameMinProjection.getImgUrl();
 		this.shortDescription = gameMinProjection.getShortDescription();
 	}
