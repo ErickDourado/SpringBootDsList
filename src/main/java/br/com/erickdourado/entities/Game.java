@@ -38,8 +38,7 @@ public class Game implements Serializable {
 	public Game() {}
 
 	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
-			String shortDescripton, String longDescription) {
-		super();
+			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
@@ -47,7 +46,7 @@ public class Game implements Serializable {
 		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
-		this.shortDescription = shortDescripton;
+		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
 
@@ -107,11 +106,11 @@ public class Game implements Serializable {
 		this.imgUrl = imgUrl;
 	}
 
-	public String getShortDescripton() {
+	public String getShortDescription() {
 		return shortDescription;
 	}
 
-	public void setShortDescripton(String shortDescripton) {
+	public void setShortDescription(String shortDescripton) {
 		this.shortDescription = shortDescripton;
 	}
 
